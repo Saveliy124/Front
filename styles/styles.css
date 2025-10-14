@@ -1,0 +1,204 @@
+/* Custom styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navigation styles */
+.navbar-nav .nav-link {
+    color: white !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #b3d4fc !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: white !important;
+    font-weight: bold;
+    border-bottom: 2px solid #0d6efd;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+/* Project cards */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15) !important;
+}
+
+/* Filter buttons */
+.filter-buttons .btn {
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.filter-buttons .btn.active {
+    background-color: #0d6efd;
+    color: white;
+}
+
+/* Modal styles */
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-header {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.modal-footer {
+    border-top: 1px solid #dee2e6;
+}
+
+/* Footer */
+footer {
+    margin-top: auto; /* Прижимает футер к низу */
+}
+
+.bi {
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.bi:hover {
+    color: #0d6efd !important;
+}
+
+/* Центрирование навигации на мобильных устройствах */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+    
+    .nav-item {
+        margin: 0.25rem 0;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1rem;
+    }
+    
+    .filter-buttons {
+        text-align: center !important;
+        margin-top: 1rem;
+    }
+    
+    .modal-dialog {
+        margin: 0.5rem;
+    }
+}
+
+
+/* Previous styles remain the same */
+
+/* Diary specific styles */
+.record-item {
+    transition: background-color 0.2s ease;
+}
+
+.record-item:hover {
+    background-color: #f8f9fa;
+}
+
+.status-toggle {
+    font-size: 1.2rem;
+}
+
+.delete-record {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.record-item:hover .delete-record {
+    opacity: 1;
+}
+
+/* Modal styles */
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-header {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.modal-footer {
+    border-top: 1px solid #dee2e6;
+}
+
+/* Form validation styles */
+.is-invalid {
+    border-color: #dc3545;
+}
+
+.invalid-feedback {
+    display: block;
+}
+
+
+
+
+/* Previous styles remain the same */
+
+/* Contacts page specific styles */
+#map {
+    border-radius: 0 0 0.375rem 0.375rem;
+}
+
+/* Form validation styles */
+.is-invalid {
+    border-color: #dc3545;
+}
+
+.invalid-feedback {
+    display: block;
+}
+
+/* Character counter */
+.form-text {
+    text-align: right;
+    font-size: 0.875rem;
+}
+
+/* Social media buttons */
+.btn-outline-dark:hover {
+    background-color: #212529;
+    color: white;
+}
+
+.btn-outline-primary:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.btn-outline-info:hover {
+    background-color: #0dcaf0;
+    color: white;
+}
+
+/* Alert positioning */
+.alert {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translate(-50%, -100%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+}
