@@ -4,4 +4,4 @@
 Этот репозиторий является каркасом для будущего веб-приложения.
 
 ## Ссылки
-- [Публичная страница на GitHub Pages](https://saveliy124.github.io/Front/src/index.html)
+- [Публичная страница на GitHub Pages]((https://saveliy124.github.io/Front/))
