@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
         recordDiv.innerHTML = `
             <div class="flex-grow-1">
                 <div class="d-flex align-items-center">
-                    <span class="status-toggle me-3" style="cursor: pointer;">
+                    <span class="status-toggle me-3" style="cursor: pointer;" aria-label="Переключить статус: ${record.topic}">
                         ${record.completed ? 
                             '<i class="bi bi-check-circle text-success"></i>' : 
                             '<i class="bi bi-x-circle text-danger"></i>'
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </div>
             </div>
-            <button class="btn btn-sm btn-outline-danger delete-record">
+            <button class="btn btn-sm btn-outline-danger delete-record" aria-label="Удалить запись: ${record.topic}">
                 <i class="bi bi-trash"></i>
             </button>
         `;

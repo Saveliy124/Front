@@ -1,9 +1,21 @@
-/* Custom styles */
+/* Custom styles - сохраняем ваш оригинальный дизайн */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+}
+
+/* Hero section adjustments */
+.rounded-circle {
+    border: 5px solid white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* Project cards hover effect */
+.project-card {
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
 }
 
 /* Navigation styles */
@@ -26,46 +38,7 @@ body {
     border-radius: 4px;
 }
 
-/* Project cards */
-.project-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
-
-.project-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15) !important;
-}
-
-/* Filter buttons */
-.filter-buttons .btn {
-    margin-left: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.filter-buttons .btn.active {
-    background-color: #0d6efd;
-    color: white;
-}
-
-/* Modal styles */
-.modal-content {
-    border-radius: 10px;
-}
-
-.modal-header {
-    border-bottom: 1px solid #dee2e6;
-}
-
-.modal-footer {
-    border-top: 1px solid #dee2e6;
-}
-
-/* Footer */
-footer {
-    margin-top: auto; /* Прижимает футер к низу */
-}
-
+/* Footer social icons */
 .bi {
     font-size: 1.2rem;
     transition: color 0.3s ease;
@@ -74,33 +47,6 @@ footer {
 .bi:hover {
     color: #0d6efd !important;
 }
-
-/* Центрирование навигации на мобильных устройствах */
-@media (max-width: 768px) {
-    .navbar-nav {
-        text-align: center;
-    }
-    
-    .nav-item {
-        margin: 0.25rem 0;
-    }
-    
-    .navbar-nav .nav-link {
-        padding: 0.75rem 1rem;
-    }
-    
-    .filter-buttons {
-        text-align: center !important;
-        margin-top: 1rem;
-    }
-    
-    .modal-dialog {
-        margin: 0.5rem;
-    }
-}
-
-
-/* Previous styles remain the same */
 
 /* Diary specific styles */
 .record-item {
@@ -113,6 +59,7 @@ footer {
 
 .status-toggle {
     font-size: 1.2rem;
+    cursor: pointer;
 }
 
 .delete-record {
@@ -124,39 +71,7 @@ footer {
     opacity: 1;
 }
 
-/* Modal styles */
-.modal-content {
-    border-radius: 10px;
-}
-
-.modal-header {
-    border-bottom: 1px solid #dee2e6;
-}
-
-.modal-footer {
-    border-top: 1px solid #dee2e6;
-}
-
-/* Form validation styles */
-.is-invalid {
-    border-color: #dc3545;
-}
-
-.invalid-feedback {
-    display: block;
-}
-
-
-
-
-/* Previous styles remain the same */
-
-/* Contacts page specific styles */
-#map {
-    border-radius: 0 0 0.375rem 0.375rem;
-}
-
-/* Form validation styles */
+/* Contacts form validation */
 .is-invalid {
     border-color: #dc3545;
 }
@@ -171,34 +86,120 @@ footer {
     font-size: 0.875rem;
 }
 
-/* Social media buttons */
-.btn-outline-dark:hover {
-    background-color: #212529;
-    color: white;
-}
+/* ===== АДАПТИВНЫЕ УЛУЧШЕНИЯ ===== */
 
-.btn-outline-primary:hover {
-    background-color: #0d6efd;
-    color: white;
-}
-
-.btn-outline-info:hover {
-    background-color: #0dcaf0;
-    color: white;
-}
-
-/* Alert positioning */
-.alert {
-    animation: slideDown 0.3s ease-out;
-}
-
-@keyframes slideDown {
-    from {
-        transform: translate(-50%, -100%);
-        opacity: 0;
+/* Mobile First подход */
+@media (max-width: 576px) {
+    /* Улучшения для очень маленьких экранов */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
     }
-    to {
-        transform: translate(-50%, 0);
-        opacity: 1;
+    
+    /* Навигация на мобильных */
+    .navbar-nav {
+        text-align: center;
+    }
+    
+    .nav-item {
+        margin: 0.25rem 0;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1rem;
+        display: block;
+    }
+    
+    /* Hero section на мобильных */
+    .hero-section img {
+        max-width: 250px;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Кнопки на всю ширину на мобильных */
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Карточки проектов */
+    .project-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Фильтры на мобильных */
+    .filter-buttons {
+        text-align: center;
+    }
+    
+    .filter-buttons .btn {
+        display: inline-block;
+        margin: 0.25rem;
+    }
+}
+
+/* Планшеты и маленькие ноутбуки */
+@media (max-width: 768px) {
+    .display-6 {
+        font-size: 1.75rem;
+    }
+    
+    .lead {
+        font-size: 1.1rem;
+    }
+    
+    /* Центрируем контент на планшетах */
+    .text-md-end {
+        text-align: center !important;
+    }
+    
+    /* Отступы для мобильных */
+    .py-5 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+}
+
+/* Улучшения для навигации на всех устройствах */
+@media (max-width: 992px) {
+    .navbar-collapse {
+        margin-top: 1rem;
+    }
+}
+
+/* Высокопиксельные дисплеи */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero-section img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+/* Поддержка reduced motion для доступности */
+@media (prefers-reduced-motion: reduce) {
+    .project-card,
+    .navbar-nav .nav-link,
+    .bi,
+    .record-item,
+    .btn {
+        transition: none;
+    }
+    
+    .project-card:hover {
+        transform: none;
+    }
+}
+
+/* Улучшения для печати */
+@media print {
+    .navbar,
+    .footer,
+    .btn,
+    .filter-buttons {
+        display: none !important;
+    }
+    
+    .card {
+        box-shadow: none !important;
+        border: 1px solid #000 !important;
     }
 }
